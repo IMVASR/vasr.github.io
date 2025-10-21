@@ -35,7 +35,7 @@
 
     <main>
         <nav class="main-nav-left">
-            <a href="https://linky.design/paul-schneider-portfolio-2025" target="_blank" rel="noopener noreferrer">Portfolio</a>, <a href="info.html">Info</a>
+            <a href="https://linky.design/paul-schneider-portfolio-2025" target="_blank" rel="noopener noreferrer">Portfolio</a>, <a href="info.html?v=1" target="_self">Info</a>
         </nav>
         
         <div class="video-container">
@@ -52,6 +52,21 @@
     </main>
 
     <script src="assets/js/script.js"></script>
+    
+    <!-- Fix cache issue with info link -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const infoLink = document.querySelector('a[href*="info.html"]');
+            if (infoLink) {
+                infoLink.addEventListener('click', function(e) {
+                    // Force clean navigation
+                    window.location.href = 'info.html';
+                    e.preventDefault();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
+
 
