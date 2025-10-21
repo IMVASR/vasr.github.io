@@ -74,11 +74,29 @@ html, body {
     cursor: none;
 }
 
+/* Hide custom cursor on mobile */
+@media screen and (max-width: 768px) {
+    html, body {
+        cursor: auto;
+    }
+    
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
 a {
     text-decoration: none;
     color: inherit;
     cursor: none;
     transition: color 0.3s ease;
+}
+
+/* Restore cursor on mobile for links */
+@media screen and (max-width: 768px) {
+    a {
+        cursor: pointer;
+    }
 }
 
 img, iframe {
