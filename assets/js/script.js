@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cursor = document.querySelector('.custom-cursor');
     const coordsDisplay = document.getElementById('cursor-coords');
     
-    if (cursor && coordsDisplay && window.innerWidth > 768) {
+    if (cursor && coordsDisplay && window.innerWidth > 1024) {
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = `${e.clientX}px`;
             cursor.style.top = `${e.clientY}px`;
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Handle link hover effects for cursor rotation (desktop only)
-    if (cursor && window.innerWidth > 768) {
+    if (cursor && window.innerWidth > 1024) {
         const links = document.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('mouseenter', () => {

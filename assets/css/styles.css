@@ -74,8 +74,8 @@ html, body {
     cursor: none;
 }
 
-/* Hide custom cursor on mobile */
-@media screen and (max-width: 768px) {
+/* Hide custom cursor on mobile and tablet */
+@media screen and (max-width: 1024px) {
     html, body {
         cursor: auto;
     }
@@ -92,8 +92,8 @@ a {
     transition: color 0.3s ease;
 }
 
-/* Restore cursor on mobile for links */
-@media screen and (max-width: 768px) {
+/* Restore cursor on mobile and tablet for links */
+@media screen and (max-width: 1024px) {
     a {
         cursor: pointer;
     }
